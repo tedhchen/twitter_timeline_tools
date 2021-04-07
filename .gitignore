@@ -1,0 +1,9 @@
+*.pdf
+*.csv
+*.txt
+*.ini
+.ipynb_checkpoints
+*.pickle
+*.RData
+*.Rout
+*.json
