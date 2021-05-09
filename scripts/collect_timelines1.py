@@ -59,10 +59,11 @@ api = twitter_auth(params)
 
 # Get users from pre-parsed data
 # csv file with:
-# user, location
+# user, subset
 # ..., ...
-# location is just a way to subset users from the csv file
-users = get_ids(path, location)
+# subset is just a way to subset users from the csv file
+# if subset == None, then no subsetting is performed
+users = get_ids(path, subset)
 
 # Getting timelines
 get_timelines(users, api, outpath)
