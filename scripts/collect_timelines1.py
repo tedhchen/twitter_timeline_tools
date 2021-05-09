@@ -15,9 +15,11 @@ def twitter_auth(config):
 	return api
 
 # Get relevant user ids
-def get_ids(path, location):
-	df = pd.read_csv(path, header = 0, dtype = {'user': 'object', 'location': 'object'})
-	return list(df.user[df['location'] == location])
+def get_ids(path, subset = None):
+	df = pd.read_csv(path, header = 0, dtype = {'user': 'object', 'subset': 'object'})
+	if subset != None:
+		df.user = df.user[df['subset'] == subset]
+	return list(df.user)
 
 # takes user ids, and writes out a txt file wiith each user's status jsons
 def get_timelines(users, api, outfolder):
