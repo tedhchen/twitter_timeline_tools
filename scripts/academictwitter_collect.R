@@ -45,6 +45,6 @@ get_users <- function(infile, outpath, key, earliest){
 users <-
 outpath <-
 
-process_city(users, outpath, bt)
+process_users(users, outpath, bt)
 
 # The `academictwitteR` packages doesn't yet deal well with errors, and no amendments have been made here, so be cognizant of what the underlying code is doing with what the API is returning.
